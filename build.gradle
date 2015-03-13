@@ -17,7 +17,16 @@ buildscript {
 
 apply plugin: 'forge'
 
-build_number = System.getenv("BUILD_NUMBER");
+ext{
+    configFile = file "gradle.properties"
+}
+
+configFile.withReader {
+    def prop = new Properties()
+    prop.load(it)
+    project.ext.config = new ConfigSlurper().parse prop
+}
+
 version = mc_version + "-" + mod_version + "-" + build_number
 
 group = "com.shukaro.warptheory"

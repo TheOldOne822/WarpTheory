@@ -15,6 +15,7 @@ import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import shukaro.warptheory.WarpTheory;
 import shukaro.warptheory.handlers.WarpHandler;
+import shukaro.warptheory.util.Constants;
 import shukaro.warptheory.util.FormatCodes;
 import thaumcraft.api.ThaumcraftApiHelper;
 
@@ -32,7 +33,7 @@ public class ItemSomething extends Item
         this.setMaxStackSize(64);
         this.setMaxDamage(0);
         this.setCreativeTab(WarpTheory.mainTab);
-        this.setUnlocalizedName("warptheory.something");
+        this.setUnlocalizedName(Constants.ITEM_SOMETHING);
     }
 
     @Override
@@ -52,7 +53,7 @@ public class ItemSomething extends Item
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister reg)
     {
-        this.icon = reg.registerIcon(WarpTheory.modID.toLowerCase(Locale.ENGLISH) + ":" + "itemSomething");
+        this.icon = reg.registerIcon(Constants.modID.toLowerCase(Locale.ENGLISH) + ":" + "itemSomething");
     }
 
     @Override

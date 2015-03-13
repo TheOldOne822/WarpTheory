@@ -16,6 +16,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.util.ForgeDirection;
 import shukaro.warptheory.WarpTheory;
+import shukaro.warptheory.handlers.ConfigHandler;
 import shukaro.warptheory.handlers.IWarpEvent;
 import shukaro.warptheory.handlers.WarpHandler;
 import shukaro.warptheory.util.*;
@@ -61,7 +62,7 @@ public class WarpSwamp extends IWarpEvent
     @SubscribeEvent
     public void onTick(TickEvent.WorldTickEvent e)
     {
-    	if(WarpTheory.allowGlobalWarpEffects == false)
+    	if(ConfigHandler.allowGlobalWarpEffects == false)
     		return;
     	
         if (e.phase != TickEvent.Phase.END || e.side != Side.SERVER)

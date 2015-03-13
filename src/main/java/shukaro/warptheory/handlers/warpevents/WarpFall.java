@@ -9,6 +9,7 @@ import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import shukaro.warptheory.WarpTheory;
 import shukaro.warptheory.block.WarpBlocks;
+import shukaro.warptheory.handlers.ConfigHandler;
 import shukaro.warptheory.handlers.IWarpEvent;
 import shukaro.warptheory.net.PacketDispatcher;
 import shukaro.warptheory.tile.TileEntityVanish;
@@ -62,7 +63,7 @@ public class WarpFall extends IWarpEvent
     @SubscribeEvent
     public void onTick(TickEvent.WorldTickEvent e)
     {
-        if (e.phase != TickEvent.Phase.END || e.side != Side.SERVER || WarpTheory.allowGlobalWarpEffects == false)
+        if (e.phase != TickEvent.Phase.END || e.side != Side.SERVER || ConfigHandler.allowGlobalWarpEffects == false)
             return;
         for (EntityPlayer player : (ArrayList<EntityPlayer>)e.world.playerEntities)
         {

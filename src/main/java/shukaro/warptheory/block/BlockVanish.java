@@ -17,7 +17,7 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
-import shukaro.warptheory.WarpTheory;
+import shukaro.warptheory.util.Constants;
 
 import java.util.List;
 import java.util.Random;
@@ -41,7 +41,7 @@ public class BlockVanish extends BlockContainer
     @Override
     public void registerBlockIcons(IIconRegister reg)
     {
-        this.icon = reg.registerIcon(WarpTheory.modID.toLowerCase() + ":blank");
+        this.icon = reg.registerIcon(Constants.modID.toLowerCase() + ":blank");
     }
 
     @SideOnly(Side.CLIENT)

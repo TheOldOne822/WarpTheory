@@ -15,6 +15,7 @@ import net.minecraft.world.World;
 import shukaro.warptheory.WarpTheory;
 import shukaro.warptheory.handlers.WarpHandler;
 import shukaro.warptheory.util.ChatHelper;
+import shukaro.warptheory.util.Constants;
 import shukaro.warptheory.util.FormatCodes;
 
 import java.util.List;
@@ -31,7 +32,7 @@ public class ItemCleanser extends Item
         this.setMaxStackSize(16);
         this.setMaxDamage(0);
         this.setCreativeTab(WarpTheory.mainTab);
-        this.setUnlocalizedName("warptheory.cleanser");
+        this.setUnlocalizedName(Constants.ITEM_WARPCLEANSER);
     }
 
     @Override
@@ -51,7 +52,7 @@ public class ItemCleanser extends Item
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister reg)
     {
-        this.icon = reg.registerIcon(WarpTheory.modID.toLowerCase(Locale.ENGLISH) + ":" + "itemCleanser");
+        this.icon = reg.registerIcon(Constants.modID.toLowerCase(Locale.ENGLISH) + ":" + "itemCleanser");
     }
 
     @Override

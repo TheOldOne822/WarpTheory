@@ -52,13 +52,13 @@ public class MiscHelper
 
     public static NBTTagCompound getWarpTag(EntityPlayer player)
     {
-        if (!player.getEntityData().hasKey(WarpTheory.modID))
+        if (!player.getEntityData().hasKey(Constants.modID))
         {
             NBTTagCompound tag = new NBTTagCompound();
-            player.getEntityData().setTag(WarpTheory.modID, tag);
+            player.getEntityData().setTag(Constants.modID, tag);
             return tag;
         }
-        return player.getEntityData().getCompoundTag(WarpTheory.modID);
+        return player.getEntityData().getCompoundTag(Constants.modID);
     }
 
     public static NBTTagCompound modEventInt(EntityPlayer player, String tagName, int amount)

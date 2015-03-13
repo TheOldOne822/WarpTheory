@@ -16,6 +16,7 @@ import net.minecraft.util.StatCollector;
 import shukaro.warptheory.WarpTheory;
 import shukaro.warptheory.handlers.IWarpEvent;
 import shukaro.warptheory.handlers.WarpHandler;
+import shukaro.warptheory.util.Constants;
 import shukaro.warptheory.util.FormatCodes;
 
 import java.util.List;
@@ -32,7 +33,7 @@ public class ItemAmulet extends Item implements IBauble
         this.setMaxStackSize(1);
         this.setMaxDamage(0);
         this.setCreativeTab(WarpTheory.mainTab);
-        this.setUnlocalizedName("warptheory.amulet");
+        this.setUnlocalizedName(Constants.ITEM_PURE_TALISMAN);
     }
 
     @Override
@@ -52,7 +53,7 @@ public class ItemAmulet extends Item implements IBauble
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister reg)
     {
-        this.icon = reg.registerIcon(WarpTheory.modID.toLowerCase(Locale.ENGLISH) + ":" + "itemAmulet");
+        this.icon = reg.registerIcon(Constants.modID.toLowerCase(Locale.ENGLISH) + ":" + "itemAmulet");
     }
 
     @Override

@@ -4,6 +4,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import shukaro.warptheory.WarpTheory;
+import shukaro.warptheory.handlers.ConfigHandler;
 import shukaro.warptheory.handlers.IWarpEvent;
 import shukaro.warptheory.util.ChatHelper;
 import shukaro.warptheory.util.FormatCodes;
@@ -25,7 +26,7 @@ public class WarpRain extends IWarpEvent
     @Override
     public boolean doEvent(World world, EntityPlayer player)
     {
-    	if(WarpTheory.allowGlobalWarpEffects == false)
+    	if(ConfigHandler.allowGlobalWarpEffects == false)
     		return false;
     	
         if (!world.getWorldInfo().isThundering())

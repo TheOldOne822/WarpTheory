@@ -4,7 +4,7 @@ import cpw.mods.fml.common.network.FMLEmbeddedChannel;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.relauncher.Side;
 import net.minecraft.entity.player.EntityPlayer;
-import shukaro.warptheory.WarpTheory;
+import shukaro.warptheory.util.Constants;
 
 import java.util.EnumMap;
 
@@ -14,7 +14,7 @@ public class CommonProxy
 
     public void init()
     {
-        warpChannel = NetworkRegistry.INSTANCE.newChannel(WarpTheory.modID, new WarpMessageToMessageCodec(), new PacketHandler());
+        warpChannel = NetworkRegistry.INSTANCE.newChannel(Constants.modID, new WarpMessageToMessageCodec(), new PacketHandler());
     }
 
     public EntityPlayer getPlayer()

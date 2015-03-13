@@ -1,8 +1,10 @@
+
+# << creative tab name >>
 itemGroup.warptheory.tab=Warp Theory
 
+# << chat item effects >>
 chat.warptheory.purge=You've got a bad feeling about this...
 chat.warptheory.purgefail=Nothing in particular happens
-
 chat.warptheory.addwarp=It feels as if something strange has slithered into you...
 chat.warptheory.minorwarp=There's no reaction
 chat.warptheory.averagewarp=The paper turns a sickly color
@@ -12,32 +14,39 @@ chat.warptheory.permanentwarp=Ingrained Warp
 chat.warptheory.normalwarp=Normal Warp
 chat.warptheory.tempwarp=Superficial Warp
 
+# << Item names >>
 item.warptheory.cleanser.name=Pure Tear
 item.warptheory.amulet.name=Purification Talisman
 item.warptheory.something.name=Hunk of Something
 item.warptheory.paper.name=Arcane Litmus Paper
 
+# << tooltips >>
 tooltip.warptheory.cleanser=Crunchy
 tooltip.warptheory.amulet=Purges Warp
 tooltip.warptheory.something=Probably edible...
 tooltip.warptheory.paper=Reacts to Warp
 
-tc.research_name.WARPSOMETHING=Hunk of Something
-tc.research_text.WARPSOMETHING=Definitely not something pleasant
+# << hunk of something >>
+tc.research_name.warptheory.something=Hunk of Something
+tc.research_text.warptheory.something=Definitely not something pleasant
 research.warptheory.warpsomething=By chance you realized that many simple meats could be transmuted into something else if they were exposed to eldritch energy. It's... probably not a good idea to look too closely at the result.
 
-tc.research_name.WARPCLEANSER=Pure Tear
-tc.research_text.WARPCLEANSER=Magical Medicine
+# << pure tear >>
+tc.research_name.warptheory.cleanser=Pure Tear
+tc.research_text.warptheory.cleanser=Magical Medicine
 research.warptheory.warpcleanser=By combining the curative properties of Ghast Tears, the magical energy of Salis Mundus, and the stabilizing properties of crystals, you've discovered a means of purging negative magical energy from the body.<BR>The process is not without drawbacks, though, as all that energy has to go somewhere.
 
-tc.research_name.WARPAMULET=Purification Talisman
-tc.research_text.WARPAMULET=More than a simple good luck charm
-research.warptheory.warpamulet=You've discovered a process by which the purifying properties of Pure Tears can be channeled over time without the requisite indigestion they cause.<BR>By simply setting two opposing tears into an amulet and imbuing it with certain magic, an accessory which continuously siphons off negative magical energy into the environment is produced.
+# << purification talisman >>
+tc.research_name.warptheory.amuletn=Purification Talisman
+tc.research_text.warptheory.amulet=More than a simple good luck charm
+research.warptheory.amulet=You've discovered a process by which the purifying properties of Pure Tears can be channeled over time without the requisite indigestion they cause.<BR>By simply setting two opposing tears into an amulet and imbuing it with certain magic, an accessory which continuously siphons off negative magical energy into the environment is produced.
 
-tc.research_name.WARPPAPER=Arcane Litmus Paper
-tc.research_text.WARPPAPER=Almost scientific
-research.warptheory.warppaper=You've decided that you'll need something somewhat more accurate than counting the strange events that happen around you to gauge the buildup of negative magical energy in your body.<BR>By imbuing some paper with Salis Mundus and the essence of water, you've created a means to get a read on just how much danger you've been exposing yourself to.
+<< litmus paper >>
+tc.research_name.warptheory.paper=Arcane Litmus Paper
+tc.research_text.warptheory.paper=Almost scientific
+research.warptheory.paper=You've decided that you'll need something somewhat more accurate than counting the strange events that happen around you to gauge the buildup of negative magical energy in your body.<BR>By imbuing some paper with Salis Mundus and the essence of water, you've created a means to get a read on just how much danger you've been exposing yourself to.
 
+# << chat warp effects >>
 chat.warptheory.bats=The sounds of wingbeats fill the air...
 chat.warptheory.blink=You suddenly feel disoriented...
 chat.warptheory.poison=Your veins catch fire...
@@ -58,3 +67,6 @@ chat.warptheory.lightning=Your hair stands on end...
 chat.warptheory.fall=You get a sudden feeling of vertigo...
 chat.warptheory.rain=You hear a rumble in the distance...
 chat.warptheory.wither=You feel overwhelmed with dread...
+
+# << Research stuff >>
+tc.research_category.WT_Category=Warp Theory

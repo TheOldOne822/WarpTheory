@@ -47,49 +47,49 @@ public class WarpHandler
 
     public static void initEvents()
     {
-    	if(WarpTheory.allowWarpEffect1)
+    	if(ConfigHandler.allowWarpEffect1)
     		warpEvents.add(new WarpBats());
-    	if(WarpTheory.allowWarpEffect2)
+    	if(ConfigHandler.allowWarpEffect2)
     		warpEvents.add(new WarpBlink());
-    	if(WarpTheory.allowWarpEffect3)
+    	if(ConfigHandler.allowWarpEffect3)
     		warpEvents.add(new WarpBuff("poison", 16, new PotionEffect(Potion.poison.id, 20 * 20)));
-    	if(WarpTheory.allowWarpEffect4)
+    	if(ConfigHandler.allowWarpEffect4)
     		warpEvents.add(new WarpBuff("nausea", 25, new PotionEffect(Potion.confusion.id, 20 * 20)));
-    	if(WarpTheory.allowWarpEffect5)
+    	if(ConfigHandler.allowWarpEffect5)
     		warpEvents.add(new WarpBuff("jump", 18, new PotionEffect(Potion.jump.id, 20 * 20, 20)));
-    	if(WarpTheory.allowWarpEffect6)
+    	if(ConfigHandler.allowWarpEffect6)
     		warpEvents.add(new WarpBuff("blind", 43, new PotionEffect(Potion.blindness.id, 20 * 20)));
-    	if(WarpTheory.allowGlobalWarpEffects && WarpTheory.allowWarpEffect7)
+    	if(ConfigHandler.allowGlobalWarpEffects && ConfigHandler.allowWarpEffect7)
     		warpEvents.add(new WarpDecay());
-    	if(WarpTheory.allowWarpEffect8)
+    	if(ConfigHandler.allowWarpEffect8)
     		warpEvents.add(new WarpEars());
-    	if(WarpTheory.allowGlobalWarpEffects && WarpTheory.allowWarpEffect9)
+    	if(ConfigHandler.allowGlobalWarpEffects && ConfigHandler.allowWarpEffect9)
     		warpEvents.add(new WarpSwamp());
-    	if(WarpTheory.allowWarpEffect10)
+    	if(ConfigHandler.allowWarpEffect10)
     		warpEvents.add(new WarpTongue());
-    	if(WarpTheory.allowWarpEffect11)
+    	if(ConfigHandler.allowWarpEffect11)
     		warpEvents.add(new WarpFriend());
-    	if(WarpTheory.allowWarpEffect12)
+    	if(ConfigHandler.allowWarpEffect12)
     		warpEvents.add(new WarpLivestockRain());
-    	if(WarpTheory.allowWarpEffect13)
+    	if(ConfigHandler.allowWarpEffect13)
     		warpEvents.add(new WarpWind());
-    	if(WarpTheory.allowWarpEffect14)
+    	if(ConfigHandler.allowWarpEffect14)
     		warpEvents.add(new WarpChests());
-    	if(WarpTheory.allowWarpEffect15)
+    	if(ConfigHandler.allowWarpEffect15)
     		warpEvents.add(new WarpBlood());
-    	if(WarpTheory.allowWarpEffect16)
+    	if(ConfigHandler.allowWarpEffect16)
     		warpEvents.add(new WarpAcceleration());
-    	if(WarpTheory.allowWarpEffect17)
+    	if(ConfigHandler.allowWarpEffect17)
     		warpEvents.add(new WarpLightning());
-    	if(WarpTheory.allowGlobalWarpEffects && WarpTheory.allowWarpEffect18 && WarpTheory.allowServerKickWarpEffects)
+    	if(ConfigHandler.allowGlobalWarpEffects && ConfigHandler.allowWarpEffect18 && ConfigHandler.allowServerKickWarpEffects)
     		warpEvents.add(new WarpFall());
-    	if(WarpTheory.allowGlobalWarpEffects && WarpTheory.allowWarpEffect19)
+    	if(ConfigHandler.allowGlobalWarpEffects && ConfigHandler.allowWarpEffect19)
     		warpEvents.add(new WarpRain());
-    	if(WarpTheory.allowGlobalWarpEffects && WarpTheory.allowWarpEffect20)
+    	if(ConfigHandler.allowGlobalWarpEffects && ConfigHandler.allowWarpEffect20)
     		warpEvents.add(new WarpWither());
-    	if(WarpTheory.allowWarpEffect21)
+    	if(ConfigHandler.allowWarpEffect21)
     		warpEvents.add(new WarpFakeSound("fakeexplosion", "random.explode", 8));
-    	if(WarpTheory.allowWarpEffect22)
+    	if(ConfigHandler.allowWarpEffect22)
     		warpEvents.add(new WarpFakeSoundBehind("fakecreeper", "creeper.primed", 2));
 
         addDecayMapping(Blocks.grass, Blocks.dirt);
@@ -211,10 +211,10 @@ public class WarpHandler
                 warpNormal.put(name, 0);
                 amount -= wn;
             }
-            if (WarpTheory.allowPermWarpRemoval)
+            if (ConfigHandler.allowPermWarpRemoval)
             {
-                if ((int)Math.ceil(amount / WarpTheory.permWarpMult) <= wp)
-                    warpPermanent.put(name, wp - (int)Math.ceil(amount / WarpTheory.permWarpMult));
+                if ((int)Math.ceil(amount / ConfigHandler.permWarpMult) <= wp)
+                    warpPermanent.put(name, wp - (int)Math.ceil(amount / ConfigHandler.permWarpMult));
                 else
                     warpPermanent.put(name, 0);
             }
@@ -227,7 +227,7 @@ public class WarpHandler
             return 0;
         if ((warpNormal != null && warpTemp != null) || tcReflect())
         {
-            return ((warpPermanent != null && warpPermanent.get(player.getDisplayName()) != null) ? warpPermanent.get(player.getDisplayName()) : 0) * WarpTheory.permWarpMult +
+            return ((warpPermanent != null && warpPermanent.get(player.getDisplayName()) != null) ? warpPermanent.get(player.getDisplayName()) : 0) * ConfigHandler.permWarpMult +
                     (warpNormal.get(player.getDisplayName()) != null ? warpNormal.get(player.getDisplayName()) : 0) +
                     (warpTemp.get(player.getDisplayName()) != null ? warpTemp.get(player.getDisplayName()) : 0) +
                     getWarpFromGear(player);

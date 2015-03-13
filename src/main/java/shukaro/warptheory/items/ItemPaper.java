@@ -14,6 +14,7 @@ import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import shukaro.warptheory.WarpTheory;
 import shukaro.warptheory.handlers.WarpHandler;
+import shukaro.warptheory.util.Constants;
 import shukaro.warptheory.util.FormatCodes;
 
 import java.util.List;
@@ -30,7 +31,7 @@ public class ItemPaper extends Item
         this.setMaxStackSize(64);
         this.setMaxDamage(0);
         this.setCreativeTab(WarpTheory.mainTab);
-        this.setUnlocalizedName("warptheory.paper");
+        this.setUnlocalizedName(Constants.ITEM_LITMUS);
     }
 
     @Override
@@ -50,7 +51,7 @@ public class ItemPaper extends Item
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister reg)
     {
-        this.icon = reg.registerIcon(WarpTheory.modID.toLowerCase(Locale.ENGLISH) + ":" + "itemPaper");
+        this.icon = reg.registerIcon(Constants.modID.toLowerCase(Locale.ENGLISH) + ":" + "itemPaper");
     }
 
     @Override
